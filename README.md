@@ -2,7 +2,7 @@
 
 **TCP/UDP Port Scanner and Active Hosts for Governance, Maintenance, Audit, and Security in Computer Networks**
 
-***IN DEVELOPMENT VERSION (EXPECTED BY 08/21/2023) *** 
+**IN DEVELOPMENT VERSION (EXPECTED BY 08/21/2023) ** 
 _**2023.8.1.1**_
 
 **System Type:** _Terminal_ 
