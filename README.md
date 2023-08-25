@@ -2,7 +2,7 @@
 
 **TCP/UDP Port Scanner and Active Hosts for Maintenance, Audit, and Security in Computer Networks**
 
-## Version in Beta Test > 2023.8.1.1
+## Version > 2023.8.1.1
 **Version:** 2023.8.1.1
 **System Type:** _Terminal_ 
 **Features:**
