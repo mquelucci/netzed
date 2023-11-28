@@ -19,12 +19,35 @@
 
 ### Métodos da _varredura_
 
-* `_init_` - Construtor da classe _varredura_, que passa o IP e a máscara de rede para a classe que serão utilizados na varredura
-* `varrerTcpUdp` - Realiza uma varredura nas portas TCP e UDP, padronizadas ou setadas manualmente pelo usuário
-* `varrePing` - Realiza a varredura Ping
-* `ResultadoScanJson` - Obtém o resultado da varredura que é do tipo **dicionário**, filtra apenas o objeto **_scan_** e converte para **_string_ json**
-* `ResultadoCompletoJson` - Obtém o resultado da varredura que é do tipo **dicionário** e converte tudo para **_string_ json**
-* `exportar` - Realiza a exportação da varredura no caminho de exportação informado nos parâmetros e obtido da _caixa de texto_ da _tab de Configurações_
+* `_init_` (none) - Construtor da classe _varredura_, que passa o IP e a máscara de rede para a classe que serão utilizados na varredura
+* `varrerTcpUdp` (bool) - Realiza uma varredura nas portas TCP e UDP, padronizadas ou setadas manualmente pelo usuário
+* `varrePing` (bool) - Realiza a varredura Ping
+* `ResultadoScanJson` (string) - Obtém o resultado da varredura que é do tipo **dicionário**, filtra apenas o objeto **_scan_** e converte para **_string_ json**
+* `ResultadoCompletoJson` (string) - Obtém o resultado da varredura que é do tipo **dicionário** e converte tudo para **_string_ json**
+* `exportar` (bool) - Realiza a exportação da varredura no caminho de exportação informado nos parâmetros e obtido da _caixa de texto_ da _tab de Configurações_
 
 ### Métodos de _configuracoes_
 
+* `gravarCaminhoTcpUdp` (string) - Grava o caminho de exportação da varredura TCP/UDP no arquivo _path.ini_
+* `gravarCaminhoPing` (string) - Grava o caminho de exportação da varredura Ping no arquivo _path.ini_
+* `verCaminhoTcpUdp` (string) - Lê o caminho de exportação da varredura TCP/UDP no arquivo _path.ini_
+* `verCaminhoPing` (string) - Lê o caminho de exportação da varredura Ping no arquivo _path.ini_
+
+### Métodos de _dialogbox_
+
+* `success` (none) - Cria um _auto close pop-up_ para mensagens destinadas a operações realizadas com êxito
+* `erro` (none) - Cria um _error pop-up_ para mensagens destinadas a falhas em operações
+* `notify` (none) - Cria uma _notify pop-up_ para mensagens de aviso destinadas a alterações importantes que foram realizadas
+* `yesno` (none) - Cria um _yes no pop-up_ para mensagens de confirmação de operação
+
+### Métodos de __validate_
+
+* `validaIp` (bool) - Verifica se o endereço IPv4 é válido
+* `validaMascara` (bool) - Verifica se a máscara de rede é válida e está na notação do _CIDR_
+* `validaPortas` (bool) - Verifica se as portas informadas são válidas dentro do escopo de portas TCP e UDP
+* `validaTimeout` (bool) - Verifica se o _timeout_ informado é válido
+* `validaIntensidade` (bool) - Verifica se a intensidade de varredura informada é válida
+
+### Métodos de _gui_
+
+* `build` (PySimpleGui.TabGroup) - Através das propriedades da classe _gui_, a função `build` monta e retorna o layout do sistema
